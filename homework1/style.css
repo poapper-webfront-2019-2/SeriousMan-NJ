@@ -9,155 +9,158 @@ html {
   background-color: #ffffff;
 }
 body {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
   margin: 0;
 }
-.header {
-  height: 40px;
-  margin: 10px;
+header {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-.header .link {
-  margin-left: auto;
-  margin-right: 0;
-  width: 200px;
+header > div:first-child {
+  flex-grow: 1;
 }
-.header .link div {
-  display: inline-block;
-  vertical-align: middle;
-  text-align: center;
-  padding: 5px;
+header > div {
+  padding-left: 15px;
 }
-.header img {
-  vertical-align: middle;
+header > div:last-child {
+  padding-right: 30px;
+}
+header img {
   height: 32px;
   width: 32px;
-  display: inline-block;
   border-radius: 50%;
 }
-.header div.menu {
+header div.menu {
   background-image: url("./images/i2_2ec824b0.png");
-  height: 30px;
-  width: 30px;
   background-size: 528px 68px;
   background-position: -132px -38px;
+  height: 30px;
+  width: 30px;
   opacity: .55;
-  padding: 0;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.placeholder-1 {
+  flex-grow: 3;
+}
+.placeholder-2 {
+  flex-grow: 4;
+}
+.content .logo {
+  display: flex;
+  justify-content: center;
 }
 .content img {
-  display: block;
   width: 270px;
-  padding-top: 100px;
-  margin: auto;
 }
-
-.content div {
-  text-align: center;
-  margin-top: 20px;
+.search {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
 }
-
 .search .container {
+  display: flex;
   width: 480px;
   border: 1px solid #dfe1e5;
   border-radius: 24px;
-  margin: auto;
 }
 .search .container:hover {
   border-color: rgba(223,225,229,0);
   box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
 }
-.search .container div {
-  margin: 0;
-  display: inline-block;
-  vertical-align: middle;
+.search .container > div {
+  display: flex;
 }
-
-.search .form {
-  width: 380px;
+.search .container > div:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 14px;
+  padding-right: 14px;
 }
-
+.search .container > div:nth-child(1) svg {
+  width: 20px;
+  height: 20px;
+  fill: #9AA0A6;
+}
+.search .container > div:nth-child(2) {
+  display: flex;
+  flex-grow: 1;
+}
 .search input {
-  width: 100%;
-  height: 40px;
+  flex-grow: 1;
+  height: 44px;
   border: 0;
   font-size: 16px;
   color: rgba(0,0,0,.87);
 }
-
-.search .container div:nth-child(1) {
-  width: 20px;
-  height: 40px;
-  padding-right: 13px;
+.search .container > div:nth-child(3) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 14px;
 }
-
-.search .container div:nth-child(1) div {
-  margin: 9px 0;
-  height: 20px;
-}
-.search .container div:nth-child(1) svg {
-  fill: #9AA0A6;
-}
-.search .container div:nth-child(3) {
-  width: 20px;
-  height: 40px;
-  padding-right: 8px 0;
-}
-.search .container div:nth-child(3) div {
-  margin: 9px 0;
-  height: 20px;
-}
-.search .container div:nth-child(3) img {
+.search .container > div:nth-child(3) img {
   width: 24px;
   height: 24px;
   padding: 0;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
 }
 .buttons button {
   background-color: #f2f2f2;
   border-radius: 4px;
   border: 1px solid #f2f2f2;
-  width: 127px;
   height: 36px;
   font-size: 14px;
   color: #5F6368;
   margin: 5px;
+  padding: 0 16px;
 }
-
 .offered-lang {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
   font-size: small;
 }
-
-.offered-lang div {
-  line-height: 28px;
-}
-
 footer {
-  width: 100%;
-  position: fixed;
-  bottom: 0;
+  display: flex;
+  flex-direction: column;
 }
-
 .footer-1, .footer-2 {
   background-color: #f2f2f2;
   line-height: 40px;
   border-top: 1px solid #e4e4e4;
 }
-
-.footer-1 div {
+.footer-1 > div {
   padding-left: 27px;
   font-size: 15px;
   color: rgba(0,0,0,.54);
 }
-
-.footer-2 div {
-  display: inline-block;
+.footer-2 {
+  display: flex;
 }
-
-.footer-2 div div {
+.footer-2 > div {
+  display: flex;
+  flex-direction: row;
+}
+.footer-2 .middle {
+  flex-grow: 1;
+}
+.footer-2 > div > div {
   padding-left: 27px;
   color: #5f6368;
 }
-
 .footer-2 .right {
-  position: fixed;
-  width: 215px;
-  right: 0;
   padding-right: 27px;
 }
