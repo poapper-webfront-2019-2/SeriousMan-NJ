@@ -26,15 +26,14 @@ function underlineOnHover(obj) {
   })
 }
 
-let feelingLucky = true
 function feelingLuckyOnClick() {
   const obj = document.getElementsByClassName('feeling-lucky').item(0)
   obj.addEventListener('click', function() {
     console.log(obj.innerHTML)
-    if (feelingLucky) {
-      obj.innerHTML = "I'm feeling sad"
+    if (obj.innerHTML === "I'm Feeling Lucky") {
+      obj.innerHTML = "I'm Feeling Sad"
     } else {
-      obj.innerHTML = "I'm feeling lucky"
+      obj.innerHTML = "I'm Feeling Lucky"
     }
     feelingLucky = !feelingLucky
   })
